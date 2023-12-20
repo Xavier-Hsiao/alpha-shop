@@ -4,6 +4,7 @@
   width: 100vw;
   flex: 0 0 70%;
   @include Container;
+  margin-top: 30px;
   border: 1px solid blue;
 }
 
@@ -14,14 +15,14 @@
   height: 100%;
 }
 
-.left-main-content {
-  // As a grid item 
-  grid-column: 1 / 2;
-  // As a grid container
+#left-main-content {
   display: grid;
   grid-template-rows: 1fr 3fr 1fr;
+  gap: 40px;
+  padding: 0 40px;
+  border: 1px solid green;
 }
 
-.right-main-content {
-  grid-column: 2 / 3;
+#right-main-content {
+
 }

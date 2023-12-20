@@ -1,0 +1,23 @@
+.progress-control {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+button {
+  background-color: transparent;
+  border: none;
+  border-radius: 30px;
+}
+
+.next-btn {
+  width: 174px;
+  height: 46px;
+  background-color: #f67599;
+  color: #fff;
+}
+
+.previous-btn {
+  width: 77px;
+  height: 24px;
+}
