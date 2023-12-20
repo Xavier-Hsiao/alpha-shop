@@ -6,7 +6,7 @@
 2. Find a folder where you want to put this project and run the command for cloning:
 
 ```
-git clone
+git clone https://github.com/Xavier-Hsiao/alpha-shop.git
 ```
 
 3. Then, you'll see a directory called "alpha-shop". Enter the directory and run the command:
