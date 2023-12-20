@@ -1,8 +1,22 @@
-# React + Vite
+# Alpha Shop v1
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## How to install?
 
-Currently, two official plugins are available:
+1. Make sure that Node.js and Npm have been installed.
+2. Find a folder where you want to put this project and run the command for cloning:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+```
+git clone
+```
+
+3. Then, you'll see a directory called "alpha-shop". Enter the directory and run the command:
+
+```
+npm install
+```
+
+4. After installment, run:
+
+```
+npm start
+```
