@@ -1,4 +1,4 @@
-.form-title {
+.formTitle {
   font-size: 2rem;
 }
 
@@ -6,7 +6,7 @@
 // 每一行都有兩個輸入攔，輸入攔的比例不同
 // 每一行用 Flexbox 分配輸入攔的橫向比例
 
-.form-body {
+.formBody {
   display: grid;
   grid-template-rows: repeat(3, 1fr);
   margin-top: 30px;
@@ -16,20 +16,20 @@
     display: flex;
     gap: 20px;
     margin: 10px 0;
-    
-    & > .input-group {
+
+    & > .inputGroup {
       flex-basis: 50%;
       gap: 20px;
     }
-    & > .flex-basis-1 {
+    & > .flexBasis1 {
       flex-basis: 25%;
     }
-    & > .flex-basis-3 {
+    & > .flexBasis3 {
       flex-basis: 75%;
     }
 
-    .input-label {
-      padding-bottom: 5px;;
+    .inputLabel {
+      padding-bottom: 5px;
     }
   }
 

@@ -1,0 +1,42 @@
+@import "./util.scss";
+
+.header {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
+  width: 100%;
+  @include Container;
+
+  .navList {
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+    list-style: none;
+    font-size: 1rem;
+    font-weight: 500;
+    .navLink {
+      text-decoration: none;
+      color: #2A2A2A;
+    }
+  }
+}
+
+.actionBtnGroup {
+  display: flex;
+  justify-content: end;
+}
+
+.actionBtn {
+  display: flex;
+  align-items: center;
+  width: 2.4rem;
+  height: 2.4rem;
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.logoImage {
+  width: 17rem;
+  height: 3rem;
+}

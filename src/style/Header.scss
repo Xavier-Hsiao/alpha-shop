@@ -1,8 +1,0 @@
-@import "./util.scss";
-
-#header {
-  width: 100%;
-  border: 1px solid salmon;
-  flex: 1;
-  @include Container;
-}

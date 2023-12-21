@@ -1,37 +1,56 @@
-import "../../style/Step2.scss";
+import styles from "../../style/Step2.module.scss";
 
 export default function Step2() {
   return (
-    <div className="step-content">
-      <form className="col col-12" data-phase="shipping">
-        <h3 className="form-title">運送方式</h3>
-        <section className="form-body col col-12">
-          <label className="radio-group col col-12" data-price={0}>
+    <div className={styles.stepContent}>
+      <form
+        className={`${styles.col} ${styles.col12} ${styles.row1}`}
+        data-phase="shipping"
+      >
+        <h3 className={styles.formTitle}>運送方式</h3>
+        <section className={`${styles.formBody} ${styles.col} ${styles.col12}`}>
+          <label
+            className={`${styles.col} ${styles.col12} ${styles.radioGroup}`}
+            data-price={0}
+          >
             <input
               id="shipping-standard"
               type="radio"
               name="shipping"
+              className={styles.deliveryInput}
               defaultChecked
             />
-            <div className="radio-info">
-              <div className="col col-12">
-                <div className="text">標準運送</div>
-                <div className="price" />
+            <div className={styles.radioInfo}>
+              <div className={`${styles.col} ${styles.col12}`}>
+                <div className={styles.text}>標準運送</div>
+                <div className={styles.price}></div>
               </div>
-              <div className="period col col-12">約 3~7 個工作天</div>
+              <div className={`${styles.col} ${styles.col12} ${styles.period}`}>
+                約 3~7 個工作天
+              </div>
             </div>
-            <div className="radio-box-border" />
+            <div className={styles.radioBoxBorder} />
           </label>
-          <label className="radio-group col col-12" data-price={500}>
-            <input id="shipping-dhl" type="radio" name="shipping" />
-            <div className="radio-info">
-              <div className="col col-12">
-                <div className="text">DHL 貨運</div>
-                <div className="price" />
+          <label
+            className={`${styles.col} ${styles.col12} ${styles.radioGroup}`}
+            data-price={500}
+          >
+            <input
+              id="shipping-dhl"
+              type="radio"
+              name="shipping"
+              className={styles.deliveryInput}
+            />
+            <div className={styles.radioInfo}>
+              <div className={`${styles.col} ${styles.col12}`}>
+                <div className={styles.text}>DHL 貨運</div>
+                <div className={styles.price} />
               </div>
-              <div className="period col col-12">48 小時內送達</div>
+              <div className={`${styles.col} ${styles.col12} ${styles.period}`}>
+                48 小時內送達
+              </div>
             </div>
-            <div className="radio-box-border" />
+            <div className={styles.radioBoxBorder} />
           </label>
         </section>
       </form>

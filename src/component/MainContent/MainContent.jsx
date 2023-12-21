@@ -12,9 +12,9 @@ export default function MainContent() {
         <div className="content-wrapper">
           <div id="left-main-content">
             <StepProgress />
-            <Step1 />
+            {/* <Step1 /> */}
             {/* <Step2 /> */}
-            {/* <Step3 /> */}
+            <Step3 />
             <ProgressControl />
           </div>
           <div id="right-main-content">

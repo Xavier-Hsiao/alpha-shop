@@ -1,0 +1,44 @@
+.formTitle {
+  font-size: 2rem;
+}
+
+.formBody {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  margin-top: 30px;
+  font-size: 1rem;
+}
+
+.radioGroup {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  width: 70%;
+  padding: 20px 10px;
+  border: 1px solid #f0f0f5;
+  &:hover {
+    border: 1px solid #2a2a2a;
+    cursor: pointer;
+  }
+  & > input {
+    width: 20px;
+    height: 20px;
+  }
+
+  .radioInfo {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+
+    .text {
+      line-height: 20px;
+      font-weight: bold;
+    }
+    .period {
+      font-size: 12px;
+      line-height: 16px;
+      font-weight: 400;
+    }
+  }
+}
