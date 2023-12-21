@@ -1,11 +1,11 @@
 import Header from "./Header";
 import MainContent from "./MainContent/MainContent";
 import Footer from "./Footer";
-import "../style/MainApp.scss"
+import styles from "../style/MainApp.module.scss";
 
 export default function MainApp() {
   return (
-    <div id="main-app">
+    <div className={styles.mainApp}>
       <Header />
       <MainContent />
       <Footer />

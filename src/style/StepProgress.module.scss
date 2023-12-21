@@ -1,10 +1,10 @@
-#step-progress-wrapper {
+.stepProgressWrapper {
   h3 {
     font-size: 2rem;
   }
 }
 
-.step-group {
+.stepGroup {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -12,20 +12,20 @@
   padding-top: 40px;
 }
 
-.step-items {
+.stepItems {
   display: flex;
   align-items: center;
   gap: 5px;
   font-size: 1rem;
 }
 
-.step-group-line {
+.stepGroupLine {
   height: 2px;
   width: 80px;
   background-color: gray;
 }
 
-.step-icon {
+.stepIcon {
   display: flex;
   align-items: center;
   justify-content: center;
