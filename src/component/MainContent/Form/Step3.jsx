@@ -1,4 +1,4 @@
-import styles from "../../style/Step3.module.scss";
+import styles from "../../../style/Step3.module.scss";
 
 export default function Step3() {
   return (

@@ -1,4 +1,4 @@
-import styles from "../../style/ProgressControl.module.scss"
+import styles from "../../../style/ProgressControl.module.scss";
 
 export default function ProgressControl() {
   return (
@@ -6,5 +6,5 @@ export default function ProgressControl() {
       <button className={styles.previousBtn}>上一步</button>
       <button className={styles.nextBtn}>下一步</button>
     </div>
-  )
+  );
 }
