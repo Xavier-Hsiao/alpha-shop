@@ -9,7 +9,7 @@ import styles from "../../style/MainContent.module.scss";
 
 export default function MainContent() {
   // Define state
-  const [step, setStep] = useState(1);
+  const [step, setStep] = useState(2);
 
   // Define event handlers
   function handleNext() {
@@ -29,7 +29,7 @@ export default function MainContent() {
       <section className={styles.mainContent}>
         <div className={styles.contentWrapper}>
           <div className={styles.leftMainContent}>
-            <StepProgress />
+            <StepProgress step={step} />
             {/* Conditional rendering of step forms */}
             {step === 1 && <Step1 />}
             {step === 2 && <Step2 />}
