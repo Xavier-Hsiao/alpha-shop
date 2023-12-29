@@ -1,5 +1,6 @@
 import Product from "./Product";
 import styles from "../../../style/cart.module.scss";
+import { useState } from "react";
 
 const data = [
   {
@@ -19,10 +20,42 @@ const data = [
 ];
 
 export default function Cart() {
-  // Generate product dynamically
-  const productList = data.map((product) => (
-    <Product key={product.id} product={product} />
-  ));
+  // Default state is the data array
+  const [cartItems, setCartItems] = useState(data);
+  // Generate cart items dynamically. Only display when qty is greater than 0
+  const cartList = cartItems.map((cartItem) =>
+    cartItem.quantity > 0 ? (
+      <Product
+        key={cartItem.id}
+        product={cartItem}
+        onQtyPlus={handleQtyPlus}
+        onQtyMinus={handleQtyMinus}
+      />
+    ) : null
+  );
+  // Derived state
+  let subtotal = cartItems.reduce(
+    (result, item) => result + item.price * item.quantity,
+    0
+  );
+  console.log(subtotal);
+  // Define event handler
+  function handleQtyPlus(id) {
+    setCartItems((prevCartItems) =>
+      prevCartItems.map((item) =>
+        item.id === id ? { ...item, quantity: item.quantity + 1 } : item
+      )
+    );
+  }
+
+  function handleQtyMinus(id) {
+    setCartItems((prevCartItems) =>
+      prevCartItems.map((item) =>
+        item.id === id ? { ...item, quantity: item.quantity - 1 } : item
+      )
+    );
+  }
+
   // Return Cart component
   return (
     <section className={styles.cartContainer}>
@@ -30,7 +63,7 @@ export default function Cart() {
       {/* Product section */}
       <section className={styles.productContainer}>
         {/* Product card area*/}
-        <ul className={styles.productList}>{productList}</ul>
+        <ul className={styles.productList}>{cartList}</ul>
       </section>
       {/* Cart info section */}
       <section className={styles.cartInfoArea}>
@@ -40,7 +73,9 @@ export default function Cart() {
         </div>
         <div className={styles.cartInfo}>
           <div className={styles.subAccountLabel}>小計</div>
-          <div className={styles.subAccount}>$200</div>
+          <div className={styles.subAccount}>
+            {cartItems.length > 0 ? `${subtotal}` : "購物籃空空如也 😵"}
+          </div>
         </div>
       </section>
     </section>
