@@ -50,9 +50,11 @@ export default function Cart() {
 
   function handleQtyMinus(id) {
     setCartItems((prevCartItems) =>
-      prevCartItems.map((item) =>
-        item.id === id ? { ...item, quantity: item.quantity - 1 } : item
-      )
+      prevCartItems
+        .map((item) =>
+          item.id === id ? { ...item, quantity: item.quantity - 1 } : item
+        )
+        .filter((item) => item.quantity > 0)
     );
   }
 
