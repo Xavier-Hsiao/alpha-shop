@@ -5,6 +5,7 @@ import Step3 from "./Form/Step3";
 import { useState } from "react";
 import ProgressControl from "./Form/ProgressControl.jsx";
 import Cart from "./Cart/cart.jsx";
+import { CardProvider } from "../../Context/CardInfoContext.jsx";
 import styles from "../../style/MainContent.module.scss";
 
 export default function MainContent() {
@@ -28,17 +29,23 @@ export default function MainContent() {
     <>
       <section className={styles.mainContent}>
         <div className={styles.contentWrapper}>
-          <div className={styles.leftMainContent}>
-            <StepProgress step={step} />
-            {/* Conditional rendering of step forms */}
-            {step === 1 && <Step1 />}
-            {step === 2 && <Step2 />}
-            {step === 3 && <Step3 />}
-            <ProgressControl onNext={handleNext} onPrevious={handlePrevious} />
-          </div>
-          <div className={styles.rightMainContent}>
-            <Cart />
-          </div>
+          <CardProvider>
+            <div className={styles.leftMainContent}>
+              <StepProgress step={step} />
+              {/* Conditional rendering of step forms */}
+              {step === 1 && <Step1 />}
+              {step === 2 && <Step2 />}
+              {step === 3 && <Step3 />}
+              <ProgressControl
+                onNext={handleNext}
+                onPrevious={handlePrevious}
+                step={step}
+              />
+            </div>
+            <div className={styles.rightMainContent}>
+              <Cart />
+            </div>
+          </CardProvider>
         </div>
       </section>
     </>
